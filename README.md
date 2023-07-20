@@ -1,1 +1,1 @@
-New project : ecommerce project
+New project : ecommerce project (updated)
