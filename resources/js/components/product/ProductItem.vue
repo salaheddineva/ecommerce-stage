@@ -19,7 +19,7 @@ const counter = reactive({
             <div>
                 <img :src="product.image" alt="" class="h-[120px] w-32">
             </div>
-            <div class=" mt-1 ">
+            <div class=" mt-1">
                 <div class="flex ">
                     <h3 class="px-2 w-[73%] font-[Raleway] font-bold">{{ product.name }}</h3>
                     <div class="w-[27%]">
