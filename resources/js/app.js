@@ -1,7 +1,14 @@
 import './bootstrap';
 
-import {createApp} from 'vue'
-
+import { createApp } from 'vue'
+import VueAxios from "vue-axios";
 import App from './App.vue'
 
-createApp(App).mount("#app")
+// Import axios
+import axios from "./axios";
+
+const app = createApp(App);
+
+app.use(VueAxios, axios);
+
+app.mount("#app")
