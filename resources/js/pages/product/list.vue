@@ -29,12 +29,13 @@ onMounted(() => {
                 </p>
             </div>
             <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-                <button
+                <router-link
+                    :to="{ name: 'product.create' }"
                     type="button"
                     class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                     Add product
-                </button>
+                </router-link>
             </div>
         </div>
         <div class="mt-8 flow-root">
@@ -57,6 +58,12 @@ onMounted(() => {
                                 >
                                     SKU
                                 </th>
+                                <th
+                                    scope="col"
+                                    class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                                >
+                                    actions
+                                </th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200">
@@ -70,6 +77,25 @@ onMounted(() => {
                                     class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"
                                 >
                                     {{ p.sku }}
+                                </td>
+                                <td
+                                    class="flex justify-center items-center space-x-2 whitespace-nowrap px-3 py-4 text-sm text-gray-500"
+                                >
+                                    <router-link
+                                        :to="{ name: 'product.show.details',params:{id:p.uuid} }"
+                                        type="button"
+                                        class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                    >
+                                        show
+                                    </router-link>
+
+                                    <router-link
+                                        :to="{ name: 'product.update',params:{id:p.uuid} }"
+                                        type="button"
+                                        class="block rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                    >
+                                        update
+                                    </router-link>
                                 </td>
                             </tr>
                         </tbody>
