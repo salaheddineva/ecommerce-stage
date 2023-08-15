@@ -1,15 +1,20 @@
 import axios from "axios";
 
 export default {
-  getProducts(payload) {
+  async getProducts(payload) {
     const query = payload.search
       ? `products?page=${payload.page}&search=${payload.search}`
       : `products?page=${payload.page}`;
-    return axios.get(query).then((response) => response.data.payload || []);
+    return await axios.get(query).then((response) => response.data.payload || []);
   },
   getAllProducts() {
     return axios
       .get("products/all")
+      .then((response) => response.data.payload || []);
+  },
+  async getProductByUuid(uuid) {
+    return await axios
+      .get(`products/uuid/${uuid}`)
       .then((response) => response.data.payload || []);
   },
   getProductById(id) {

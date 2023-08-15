@@ -17,17 +17,17 @@ class ProductController extends Controller
             'payload' =>
             [
                 [
-                    'uuid' => str()->uuid(),
+                    'uuid' => "2aa3f3e5-fcd3-41ab-9942-4da2ac9af1c0",
                     'name' => 'Prod 1',
                     'sku' => str()->random(6),
                 ],
                 [
-                    'uuid' => str()->uuid(),
+                    'uuid' => "006e36a4-c24d-44e0-a8f9-b2eff2b96c48",
                     'name' => 'Prod 2',
                     'sku' => str()->random(6),
                 ],
                 [
-                    'uuid' => str()->uuid(),
+                    'uuid' => "31b4928c-3856-4210-a425-95f9a460975b",
                     'name' => 'Prod 3',
                     'sku' => str()->random(6),
                 ]
@@ -41,6 +41,33 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function getProductByUuid(string $uuid)
+    {
+        $collection = collect([
+            [
+                'uuid' => "2aa3f3e5-fcd3-41ab-9942-4da2ac9af1c0",
+                'name' => 'Prod 1',
+                'sku' => str()->random(6),
+            ],
+            [
+                'uuid' => "006e36a4-c24d-44e0-a8f9-b2eff2b96c48",
+                'name' => 'Prod 2',
+                'sku' => str()->random(6),
+            ],
+            [
+                'uuid' => "31b4928c-3856-4210-a425-95f9a460975b",
+                'name' => 'Prod 3',
+                'sku' => str()->random(6),
+            ]
+        ]);
+        return response()->json([
+            'payload' => [...$collection->where('uuid', $uuid)->first()]
+        ]);
     }
 
     /**
