@@ -5,34 +5,39 @@ export default {
     const query = payload.search
       ? `products?page=${payload.page}&search=${payload.search}`
       : `products?page=${payload.page}`;
-    return await axios.get(query).then((response) => response.data.payload || []);
+    // return await axios.get(query).then((response) => response.data.payload || []).catch((error)=>error);
+    return await new Promise((resolve, reject) => {
+      axios.get(query).then((response) => resolve(response.data.payload || [])).catch((error) => reject(error));
+    });
   },
-  getAllProducts() {
-    return axios
-      .get("products/all")
-      .then((response) => response.data.payload || []);
+  async getAllProducts() {
+    return await new Promise((resolve, reject) => {
+      axios.get(`products/all`).then((response) => resolve(response.data.payload || [])).catch((error) => reject(error));
+    });
   },
   async getProductByUuid(uuid) {
-    return await axios
-      .get(`products/uuid/${uuid}`)
-      .then((response) => response.data.payload || []);
+    return await new Promise((resolve, reject) => {
+      axios.get(`products/uuid/${uuid}`).then((response) => resolve(response.data.payload || null)).catch((error) => reject(error));
+    });
   },
-  getProductById(id) {
-    return axios
-      .get(`products/${id}`)
-      .then((response) => response.data.payload || []);
+  async getProductById(id) {
+    return await new Promise((resolve, reject) => {
+      axios.get(`products/${id}`).then((response) => resolve(response.data.payload || null)).catch((error) => reject(error));
+    });
   },
-  deleteProduct(id) {
-    return axios.delete(`products/${id}`);
+  async deleteProduct(id) {
+    return await new Promise((resolve, reject) => {
+      axios.delete(`products/${id}`).then((response) => resolve(response.data.payload || null)).catch((error) => reject(error));
+    });
   },
-  addProduct(product) {
-    return axios
-      .post("products", product)
-      .then((response) => response.data.payload || null);
+  async addProduct(product) {
+    return await new Promise((resolve, reject) => {
+      axios.post("products", product).then((response) => resolve(response.data.payload || null)).catch((error) => reject(error));
+    });
   },
-  editProduct(product) {
-    return axios
-      .put(`products/${product.id}`, product)
-      .then((response) => response.data.payload || null);
+  async editProduct(product) {
+    return await new Promise((resolve, reject) => {
+      axios.put(`products/${product.id}`, product).then((response) => resolve(response.data.payload || null)).catch((error) => reject(error));
+    });
   },
 };

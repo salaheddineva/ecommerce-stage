@@ -26,6 +26,7 @@ export const useProductStore = defineStore({
       }
     },
     async fetchProductByUuid(uuid) {
+      console.log(uuid)
       this.product = null
       this.loading = true
       try {

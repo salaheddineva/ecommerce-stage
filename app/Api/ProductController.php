@@ -2,37 +2,35 @@
 
 namespace App\Api;
 
-use App\Http\Controllers\Controller;
+use App\Enums\eRespCode;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class ProductController extends ResponseController
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return response()->json([
-            'payload' =>
+        return $this->resp->ok(eRespCode::P_LISTED_200_00,  [
             [
-                [
-                    'uuid' => "2aa3f3e5-fcd3-41ab-9942-4da2ac9af1c0",
-                    'name' => 'Prod 1',
-                    'sku' => str()->random(6),
-                ],
-                [
-                    'uuid' => "006e36a4-c24d-44e0-a8f9-b2eff2b96c48",
-                    'name' => 'Prod 2',
-                    'sku' => str()->random(6),
-                ],
-                [
-                    'uuid' => "31b4928c-3856-4210-a425-95f9a460975b",
-                    'name' => 'Prod 3',
-                    'sku' => str()->random(6),
-                ]
+                'uuid' => "2aa3f3e5-fcd3-41ab-9942-4da2ac9af1c0",
+                'name' => 'Prod 1',
+                'sku' => str()->random(6),
+            ],
+            [
+                'uuid' => "006e36a4-c24d-44e0-a8f9-b2eff2b96c48",
+                'name' => 'Prod 2',
+                'sku' => str()->random(6),
+            ],
+            [
+                'uuid' => "31b4928c-3856-4210-a425-95f9a460975b",
+                'name' => 'Prod 3',
+                'sku' => str()->random(6),
             ]
         ]);
+       
     }
 
     /**
