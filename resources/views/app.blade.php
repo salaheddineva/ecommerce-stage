@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-full">
 
 <head>
     <meta charset="utf-8">
@@ -9,7 +9,7 @@
     @vite('resources/css/app.css')
 </head>
 
-<body>
+<body class="h-full">
     <div id="app"></div>
     @vite('resources/js/app.js')
 </body>

@@ -14,8 +14,10 @@ const routes = [
    { path: ':uuid/details', name: 'product.show.details', component: ShowDetailsProduct, props: true },
    { path: ':id/update', name: 'product.update', component: UpdateProduct },
    { path: 'create', name: 'product.create', component: AddNewProduct },
-  ]
+
+  ],
  },
+ { path: '/:notFound', name: 'not.found', component: () => import('@/pages/pageNotFound.vue') }
 ];
 
 
