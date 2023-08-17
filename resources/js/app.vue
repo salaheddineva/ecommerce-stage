@@ -1,3 +1,16 @@
+<script setup>
+// import Acceuil from "./pages/Acceuil.vue";
+//  import Aboutus from "./pages/Aboutus.vue" ;
+// import Contact from './pages/Contact.vue';
+//  import Admin from './pages/Admin.vue';
+ import Product from './pages/Product.vue';
+</script>
+
+
 <template>
-    <span class="text-indigo-500">How To Install Vue 3 in Laravel 9 with Vite - TechvBlogs</span>
+  <!-- <Acceuil />  -->
+   <!-- <Aboutus /> -->
+  <!-- <Contact /> -->
+  <!-- <Admin /> -->
+  <Product />
 </template>
