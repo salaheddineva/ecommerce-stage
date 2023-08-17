@@ -1,7 +1,7 @@
 <?php
 
 use App\Api\ProductController;
-use Illuminate\Http\Request;
+use App\Api\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'auth'
+], function () {
+    Route::post('register', [AuthController::class, 'register']);
+    Route::post('login', [AuthController::class, 'login']);
+    Route::get('logout', [AuthController::class, 'logout']);
+    Route::get('refresh', [AuthController::class, 'refresh']);
+    Route::get('me', [AuthController::class, 'me']);
 });
-Route::get('products/uuid/{uuid}',[ProductController::class,'getProductByUuid']);
-Route::apiResource('products',ProductController::class);
+
+Route::get('products/uuid/{uuid}', [ProductController::class, 'getProductByUuid']);
+Route::apiResource('products', ProductController::class);

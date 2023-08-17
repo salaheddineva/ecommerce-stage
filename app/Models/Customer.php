@@ -10,17 +10,20 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
 class Customer extends Model
 {
     use HasFactory;
-    protected $guarded = [];
+
+    protected $fillable = ['address','phone','gender'];
 
     public function user(): MorphOne
     {
         return $this->morphOne(User::class, "userable");
     }
+
     public function carts(): HasMany 
     {
         return $this->hasMany(Cart::class);
 
     }
+
     public function addresses(): HasMany 
     {
         return $this->hasMany(Address::class);
