@@ -1,7 +1,5 @@
 <script setup >
-import Footer from '@/components/Footer.vue';
 import CustomProduct from '@/components/CustomProduct.vue';
-import Header from '@/components/Header.vue';
 const url1 = 'images/img5.jpg';
 const url2 = 'images/img6.jpg';
 const url3 = 'images/img7.jpg';
@@ -11,7 +9,6 @@ const url6 = 'images/img2.png';
 </script>
 <template>
     <div>
-        <Header />
         <div class="flex  text-[24px] justify-center space-x-28 pt-14 font-['Open_Sans'] ">
             
             <a href="#Produits"> Nos Produits</a>
@@ -35,8 +32,4 @@ const url6 = 'images/img2.png';
         </div>
 
     </div>
-
-
-
-    <Footer />
 </template>

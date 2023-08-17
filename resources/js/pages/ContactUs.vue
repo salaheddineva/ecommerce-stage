@@ -1,7 +1,5 @@
 <script setup>
-import CustomInput from '@/components/CustomInput.vue';
-import Footer from '@/components/Footer.vue';
-import Header from '@/components/Header.vue'; 
+import CustomInput from '@/components/globals/CustomInput.vue';
 import { ref, reactive } from 'vue';
 const accountInfo = reactive({
     firstname: "",
@@ -13,9 +11,8 @@ const accountInfo = reactive({
 
 </script>
 <template>
-    <Header />
     <div>
-        <div class="flex h-screen flex-col items-center justify-center">
+        <div class="flex flex-col items-center justify-center">
             <h3 class="text-[26px] font-['Open_Sans'] ">Contactez-nous</h3>
             <form action="" class="flex flex-col gap-[12px]">
                 <custom-input :value="accountInfo.firstname" v-model="accountInfo.firstname" classname="w-[340px] "
@@ -30,6 +27,5 @@ const accountInfo = reactive({
             </form>
         </div>
     </div>
-    <Footer />
 </template>
 

@@ -1,5 +1,5 @@
 <script setup>
-import ProductColor from './ProductColor.vue';
+import ProductColor from '@/components/globals/ProductColor.vue';
 defineProps({
     Src: {
         type: String

@@ -1,12 +1,11 @@
 <script setup >
-import Footer from '@/components/Footer.vue';
-import Header from '@/components/Header.vue';
+
 
 </script>
 <template>
     <div>
-        <Header />
-        <div class="space-y-8  font-['Open_Sans'] h-screen ">
+       
+        <div class="space-y-8  font-['Open_Sans']">
             <div class="text-[40px] text-center pt-6">
                 <h1>Qui sommes-nous ?</h1>
             </div>
@@ -30,5 +29,4 @@ import Header from '@/components/Header.vue';
         </div>
 
     </div>
-    <Footer />
 </div></template>

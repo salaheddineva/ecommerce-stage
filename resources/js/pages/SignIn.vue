@@ -25,8 +25,8 @@ const genders = reactive([
 )
 </script>
 <template>
-    <div class="">
-        <div class="flex items-center py-2 px-[140px] ">
+    <div class="bg-[#11131B] flex flex-col justify-center">
+        <div class="flex items-center my-20 mx-auto">
             <img class="w-[43px] h-[26.427px]" src="images/logo.png" alt="" />
             <p class="text-white font-['Open_Sans'] text-lg">SFAKES</p>
         </div>
@@ -76,9 +76,3 @@ const genders = reactive([
         </div>
     </div>
 </template>
-
-<style>
-body {
-    @apply bg-[#11131B] flex justify-center;
-}
-</style>

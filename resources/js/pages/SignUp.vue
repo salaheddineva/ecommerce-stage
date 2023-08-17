@@ -11,8 +11,8 @@ const credentials = reactive({
 
 </script>
 <template>
-    <div>
-        <div class="flex items-center my-20 mx-[110px] ">
+    <div class="bg-[#11131B] flex justify-center">
+        <div class="flex items-center my-20 mx-auto">
             <img class="w-[80px] h-[50px]" src="images/logo.png" alt="" />
             <h1 class="text-white font-['Open_Sans'] text-lg">SFAKES</h1>
         </div>
@@ -37,8 +37,3 @@ const credentials = reactive({
         </div>
     </div>
 </template>
-<style>
-body {
-    @apply bg-[#11131B] flex justify-center;
-}
-</style>

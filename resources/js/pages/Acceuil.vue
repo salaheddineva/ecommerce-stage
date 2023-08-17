@@ -1,10 +1,9 @@
 <script setup>
-import Footer from '@/components/Footer.vue';
-import Header from '@/components/Header.vue';
+
 </script>
 <template>
   <div>
-    <Header />
+ 
 
     <div class="flex">
       <img class=" w-full h-[839px]" src="images/img2.png" alt="background" />
@@ -40,9 +39,6 @@ import Header from '@/components/Header.vue';
 
 
     </div>
-
-
-    <Footer />
   </div>
 </template>
 <style></style>
