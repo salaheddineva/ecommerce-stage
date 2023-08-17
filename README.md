@@ -1,6 +1,5 @@
 New project : ecommerce project (updated)
 
-
 run this cmd below 👇
 
 composer install
