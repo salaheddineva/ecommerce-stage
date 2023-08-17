@@ -1,17 +1,17 @@
 <script setup>
-import CustomHeader from '@/components/CustomHeader.vue';
-// import CustomQuantity from '@/components/CustomQuantity.vue';
+import CustomHeader from '@/components/globals/CustomHeader.vue';
+import CustomQuantity from '@/components/CustomQuantity.vue';
 import CustomButtonVue from '@/components/globals/CustomButton.vue';
-import CustomFooterVue from '@/components/CustomFooter.vue';
+import CustomFooterVue from '@/components/globals/CustomFooter.vue';
 </script>
 <template>
     <CustomHeader />
     <div class="flex  mx-20 my-28">
         <div class="flex flex-col space-y-20 w-[50%]">
-            <img src="images/SacMarron.png" class="w-[500px]  " alt="">
+            <img src="images/sac_marron.png" class="w-[500px]  " alt="">
             <div class="flex flex-row  space-x-2">
-                <img src="images/SacNoire.png" alt="">
-                <img src="images/SacGris.png" alt="">
+                <img src="images/sac_noire.png" alt="">
+                <img src="images/sac_gris.png" alt="">
             </div>
         </div>
         <div class="flex flex-col  space-y-6 w-[50%]  ">
@@ -43,7 +43,7 @@ import CustomFooterVue from '@/components/CustomFooter.vue';
                 <CustomQuantity />
             </div>
             <div class="flex">
-                <CustomButtonVue button="Acheter" class="h-14 mx-0 py-4 bg-[#ECDAC3] rounded-lg" />
+                <CustomButtonVue button="Acheter" class="h-14 mx-0 py-2 text-center bg-[#ECDAC3] rounded-lg" />
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 <script setup>
 import CustomProfileInput from '@/components/CustomProfileInput.vue';
-import CustomHeader from '@/components/CustomHeader.vue';
-import CustomFooter from '@/components/CustomFooter.vue';
+import CustomHeader from '@/components/globals/CustomHeader.vue';
+import CustomFooter from '@/components/globals/CustomFooter.vue';
 </script>
 <template>
     <div>
@@ -28,10 +28,11 @@ import CustomFooter from '@/components/CustomFooter.vue';
                     class="rounded-[9px] border border-[#D1BCAB] px-[28px] py-[9px] text-[#C4AB8A] font-['Open_Sans']">Consulter</button>
             </div>
             <button
-                class="mt-[28px] rounded-[26px] bg-[#C99249]/20 px-[70px] py-[8px] text-[20px] font-['Open_Sans']">Enregistrer
+                class="my-[28px] rounded-[26px] bg-[#C99249]/20 px-[70px] py-[8px] text-[20px] font-['Open_Sans']">Enregistrer
                 les
                 modifications</button>
         </div>
         <CustomFooter />
 
-</div></template>
+    </div>
+</template>

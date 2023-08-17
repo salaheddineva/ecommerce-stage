@@ -1,5 +1,6 @@
 <script setup>
 // import CustomQuantity from './CustomQuantity.vue';
+import ProductColor from '@/components/globals/ProductColor.vue';
 defineProps({
     product: {
         type: Object
@@ -8,7 +9,6 @@ defineProps({
 const emits = defineEmits(['deleteItem', 'increase', 'decrease']);
 
 import { reactive } from 'vue';
-import ProductColor from '../globals/ProductColor.vue';
 const counter = reactive({
     count: 0
 });

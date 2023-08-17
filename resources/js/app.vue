@@ -1,8 +1,8 @@
 <script setup>
-// import SigneIn from "./pages/SigneIn.vue";
+import SigneIn from "./pages/SigneIn.vue";
 // import SigneUp from "./pages/SigneUp.vue";
 // import Profile from "./pages/Profile.vue";
-import Cart from './pages/order/Cart.vue';
+// import Cart from './pages/order/Cart.vue';
 // import CustomFooter from './components/CustomFooter.vue';
 // import Order from './pages/order/Order.vue';
 // import Payment from './pages/Payment.vue';
@@ -11,10 +11,10 @@ import Cart from './pages/order/Cart.vue';
 
 <template>
     <div>
-        <!-- <signe-in /> -->
+        <signe-in />
         <!-- <signe-up /> -->
         <!-- <profile /> -->
-        <cart />
+        <!-- <cart /> -->
         <!-- <custom-footer /> -->
         <!-- <order /> -->
         <!-- <payment /> -->

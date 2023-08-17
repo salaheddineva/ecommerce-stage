@@ -1,8 +1,14 @@
 <script setup>
-import CustomPassword from '@/components/CustomPassword.vue';
-import CustomInputSigneUp from '@/components/CustomInputSigneUp.vue';
-import CustomCheckbox from '@/components/CustomCheckbox.vue';
+import CustomCheckbox from '@/components/globals/CustomCheckbox.vue';
 import CustomButtonVue from '@/components/globals/CustomButton.vue';
+import CustomInput from '@/components/globals/CustomInput.vue';
+import { reactive, ref, watch } from 'vue';
+const credentials = reactive({
+    email: "",
+    password: ""
+});
+
+
 </script>
 <template>
     <div>
@@ -20,8 +26,10 @@ import CustomButtonVue from '@/components/globals/CustomButton.vue';
             <div class=" flex flex-col  py-2 my-3 mx-8 gap-[12px] w-[340px]   rounded-[8px] bg-[#ECDAC3]">
                 <p class="text-[#907C61]  text-center font-[Raleway] text-[16px]">Saisissez votre mot de passe : </p>
                 <form action="" class="flex flex-col gap-[12px]">
-                    <CustomInputSigneUp class="mx-2" />
-                    <custom-password class="h-[50px] mx-2 " label="Mot de passe :" />
+                    <custom-input classname="mx-2" label="Email :" input-type="email" :value="credentials.email"
+                        v-model="credentials.email" />
+                    <custom-input classname=" mx-2 " label="Mot de passe :" input-type="password"
+                        :value="credentials.password" v-model="credentials.password" />
                 </form>
                 <CustomCheckbox class=" mx-3" checkbox="Mémoriser mon authentification" />
                 <CustomButtonVue button="S'authentifier" class="bg-white w-8 mx-auto" />

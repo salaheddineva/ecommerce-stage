@@ -2,7 +2,7 @@
 import CustomHeader from '@/components/globals/CustomHeader.vue';
 import CustomButton from '@/components/globals/CustomButton.vue';
 import ProductsListe from '@/components/product/ProductsListe.vue';
-import CustomFooterVue from '@/components/globals/CustomFooter.vue';
+import CustomFooter from '@/components/globals/CustomFooter.vue';
 import { reactive } from 'vue';
 const products = reactive([
     {
@@ -75,5 +75,5 @@ const decrease = (id) => {
             <CustomButton class="bg-[#ECDAC3] mx-auto rounded-[9px] h-[50px] px-8 py-3 " button="Confirmer" />
         </div>
     </div>
-    <CustomFooterVue />
+    <CustomFooter />
 </template>

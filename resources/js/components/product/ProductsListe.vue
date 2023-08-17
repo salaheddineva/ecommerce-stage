@@ -1,5 +1,5 @@
 <script setup>
-import SelectedProduct from './ProductItem.vue';
+import ProductItem from './ProductItem.vue';
 defineProps({
     products: {
         type: Array,
@@ -19,6 +19,6 @@ const emits = defineEmits(['deleteItem', 'increase', 'decrease']);
             <h3 class="font-[Raleway]  ">Total</h3>
         </div>
     </div>
-    <SelectedProduct v-for="item in products" :product="item" @delete-item="(id) => emits('deleteItem', id)"
-        @decrease="(id)=>emits('decrease', id)" @increase="(id)=>emits('increase', id)" />
+    <ProductItem v-for="item in products" :product="item" @delete-item="(id) => emits('deleteItem', id)"
+        @decrease="(id) => emits('decrease', id)" @increase="(id) => emits('increase', id)" />
 </template>
