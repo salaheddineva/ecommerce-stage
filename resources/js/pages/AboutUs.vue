@@ -9,7 +9,7 @@
             <div class="text-[40px] text-center pt-6">
                 <h1>Qui sommes-nous ?</h1>
             </div>
-            <div class="space-y-8 pb-8 text-[22px] text-center">
+            <div class="space-y-8 pb-8 text-[22px] pl-14 pr-14">
                 <p>Notre entreprise familiale SFAKES, basée à Marrakech au Maroc, est spécialisée dans la création de
                     produits en cuir haut de gamme depuis 1940. Nous avons une expertise et une expérience considérables
                     dans l'industrie de la maroquinerie. Nous sommes fiers de continuer la tradition de la fabrication
