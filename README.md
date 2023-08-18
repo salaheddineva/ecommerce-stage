@@ -1,7 +1,7 @@
 New project : ecommerce project (updated)
 
 run this cmd below 👇
-
+npm install 
 composer install
 
 php artisan jwt:secret
