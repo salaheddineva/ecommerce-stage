@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="h-full">
+<html class="h-full font-semibold">
 
 <head>
     <meta charset="utf-8">

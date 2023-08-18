@@ -18,6 +18,6 @@ import PublicLayout from "@/layouts/PublicLayout.vue";
 
 <template>
     <div>
-        <PublicLayout/>
+        <router-view></router-view>
     </div>
 </template>

@@ -4,7 +4,7 @@
 </script>
 <template>
     <div>
-        <div class="space-y-8 font-['Open_Sans']">
+        <div class="space-y-8 ">
             <div class="text-[40px] text-center pt-6">
                 <h1>Qui sommes-nous ?</h1>
             </div>

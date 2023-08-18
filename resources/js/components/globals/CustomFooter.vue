@@ -1,29 +1,29 @@
 <script setup></script>
 <template>
-    <div class=" bottom-0 left-0 right-0">
-        <div class="flex justify-between w-full  bg-black p-10">
-            <div class=" space-y-8 text-white">
-                <span class="font-['Open_Sans']">Sfakes</span>
-                <p class="text-xs w-[210px] font-['Open_Sans']">
+    <div class="bottom-0 inset-x-0 text-white">
+        <div class="grid grid-cols-12 w-full bg-black p-10">
+            <div class="col-span-12 md:col-span-6 lg:col-span-3 my-4 lg:my-0">
+                <h1 class="font-extrabold mb-1">Sfakes</h1>
+                <p class="text-xs md:w-[210px]">
                     Nous avons une expertise et une expérience considérables dans l'industrie de la maroquinerie. Nous
                     sommes fiers de continuer la tradition de la fabrication artisanale
                 </p>
             </div>
 
-            <div class="flex flex-col space-y-8 text-white">
-                <h1 class="font-['Open_Sans']">Liens</h1>
+            <div class="flex flex-col col-span-12 md:col-span-6 lg:col-span-3 my-4 lg:my-0">
+                <h1 class="font-extrabold mb-1">Liens</h1>
                 <div class="flex flex-col">
                     <router-link :to="{ name: 'about-us' }"
-                        class="text-white font-['Open_Sans']  text-20 font-normal leading-24 tracking-wider">A
+                        class="   text-20 font-bold leading-24 tracking-wider">A
                         propos de nous</router-link> <router-link :to="{ name: 'our-products' }"
-                        class="text-white font-['Open_Sans']  text-20 font-normal leading-24 tracking-wider">Produits</router-link>
+                        class="   text-20 font-bold leading-24 tracking-wider">Produits</router-link>
                     <router-link :to="{ name: 'contact-us' }"
-                        class="text-white font-['Open_Sans']  text-20 font-normal leading-24 tracking-wider">Contactez nous
+                        class="   text-20 font-bold leading-24 tracking-wider">Contactez nous
                     </router-link>
                 </div>
             </div>
-            <div class="flex flex-col space-y-8 text-white">
-                <h1 class="text-white font-['Open_Sans'] ">Contact</h1>
+            <div class="flex flex-col col-span-12 md:col-span-6 lg:col-span-3 my-4 lg:my-0">
+                <h1 class="font-extrabold mb-1">Contact</h1>
                 <div class="space-y-4">
                     <div class="flex flex-row items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -35,7 +35,7 @@
                                 stroke="white" stroke-width="1.5" />
                         </svg>
 
-                        <a href="#localisation" class="text-white font-['Open_Sans'] ml-2">localisation</a>
+                        <a href="#localisation" class="  ml-2">localisation</a>
                     </div>
                     <div class="flex flex-row items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -47,12 +47,12 @@
                                 stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
 
-                        <a href="#+212-12345678" class="text-white font-['Open_Sans'] ml-2">+212-12345678</a>
+                        <a href="#+212-12345678" class="  ml-2">+212-12345678</a>
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col items-center space-y-8">
-                <h1 class="text-white font-['Open_Sans'] ">Réseaux sociaux</h1>
+            <div class="flex flex-col space-y-8 col-span-12 md:col-span-6 lg:col-span-3 my-4 lg:my-0">
+                <h1 class="font-extrabold">Réseaux sociaux</h1>
                 <div class="flex space-x-8">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path

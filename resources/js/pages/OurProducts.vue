@@ -9,7 +9,7 @@ const url6 = 'images/img2.png';
 </script>
 <template>
     <div>
-        <div class="flex  text-[24px] justify-center space-x-28 pt-14 font-['Open_Sans'] ">
+        <div class="flex  text-[24px] justify-center space-x-28 pt-14  ">
             <a href="#Produits"> Nos Produits</a>
             <a href="#sacs">Sacs</a>
             <a href="#Protefeuilles">Portefeuilles</a>

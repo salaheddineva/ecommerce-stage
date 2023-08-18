@@ -11,7 +11,7 @@ const accountInfo = reactive({
 });
 </script>
 <template>
-    <h3 class="my-2 text-center text-[34px] font-['Open_Sans'] ">Contactez-nous</h3>
+    <h3 class="my-2 text-center text-[34px] ">Contactez-nous</h3>
 
     <div class="py-8 my-2 w-[400px] h-auto items-center rounded-[26px] bg-[#ECDAC3] justify-center mx-auto">
         <div class=" flex flex-col items-center justify-center space-y-8">
@@ -27,7 +27,7 @@ const accountInfo = reactive({
 
             </form>
             <button
-                class="rounded-[10px] h-[40px] w-[200px] my-8 bg-black text-[#FFFFFF] font-['Open_Sans']">Envoyer</button>
+                class="rounded-[10px] h-[40px] w-[200px] my-8 bg-black text-[#FFFFFF] ">Envoyer</button>
         </div>
     </div>
 </template>

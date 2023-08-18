@@ -14,10 +14,10 @@ const emits = defineEmits(['deleteItem', 'increase', 'decrease']);
             <h3 class="font-[Raleway] ">Image</h3>
             <h3 class="font-[Raleway] ">Produit</h3>
         </div>
-        <div class="">
+        <div >
             <h3 class="font-[Raleway]  ">Total</h3>
         </div>
     </div>
-    <ProductItem v-for="item in products" :product="item" @delete-item="(id) => emits('deleteItem', id)"
+    <ProductItem v-for="(item,index) in products" :key="index" :product="item" @delete-item="(id) => emits('deleteItem', id)"
         @decrease="(id) => emits('decrease', id)" @increase="(id) => emits('increase', id)" />
 </template>

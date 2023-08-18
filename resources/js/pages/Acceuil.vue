@@ -8,7 +8,7 @@
     </div>
     <div class="flex mx-24 space-x-10 justify-between h-[500px]">
         <img src="images/img3.jpg" alt="Image" class=" rounded-[10px] w-[350px] h-[350px] pt-10 ">
-      <div class=" flex font-['Open_Sans'] text-[24px] space-y-8 flex-col  px-35 py-16 pr-20">
+      <div class=" flex  text-[24px] space-y-8 flex-col  px-35 py-16 pr-20">
         <h1>Un artisanat traditionnel avec une histoire riche</h1>
         <p> Notre entreprise familiale SFAKES, basée à Marrakech au Maroc, est spécialisée dans la création de produits en
           cuir haut de gamme depuis 1940. Nous avons une expertise et une expérience considérables dans l'industrie de la

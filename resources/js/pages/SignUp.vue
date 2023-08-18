@@ -1,39 +1,62 @@
 <script setup>
-import CustomCheckbox from '@/components/globals/CustomCheckbox.vue';
-import CustomButtonVue from '@/components/globals/CustomButton.vue';
-import CustomInput from '@/components/globals/CustomInput.vue';
-import { reactive, ref, watch } from 'vue';
-const credentials = reactive({
+import GenderListe from "../components/globals/GenderListe.vue";
+import CustomCheckbox from "@/components/globals/CustomCheckbox.vue";
+import CustomButtonVue from "@/components/globals/CustomButton.vue";
+import CustomInput from "@/components/globals/CustomInput.vue"
+import { ref, reactive } from 'vue';
+const accountInfo = reactive({
+    firstname: "",
+    lastname: "",
     email: "",
-    password: ""
+    phone: "",
+    password: "",
+    passwordConfirmation: "",
+    gender: "",
 });
+const genders = reactive([
+    { type: "Femme" },
+    { type: "Homme" },
+    { type: "Non spécifié" }]
+);
 </script>
 <template>
-    <div class="bg-[#11131B] flex flex-col justify-center">
+    <div class="bg-[#11131B] flex flex-col justify-center h-screen">
         <div class="flex items-center my-10 mx-auto">
-            <img class="w-[80px] h-[50px]" src="./../../../public/images/logo.png" alt="" />
-            <h1 class="text-white font-['Open_Sans'] text-lg">SFAKES</h1>
+            <img class="w-[43px] h-[26.427px]" src="./../../../public/images/logo.png" alt="" />
+            <p class="text-white  text-lg">SFAKES</p>
         </div>
-        <div class="w-[400px] h-auto mb-4  rounded-[26px] bg-white justify-center mx-auto p-4 ">
-            <h1 class="text-[#D1BCAB] pb-2  text-center font-[Raleway] text-[18px]">
+        <div class="w-[400px] h-auto my-4 items-center rounded-[26px] bg-white justify-center mx-auto ">
+            <h1 class="text-[#D1BCAB] py-2  text-center font-[Raleway] text-[18px]">
                 Bienvenue dans votre store en ligne
             </h1>
             <h3 class="text-[#D1BCAB] text-center font-[Raleway] text-[12px]">
                 Outil digital pour faciliter votre vie
             </h3>
-            <div class=" flex flex-col  py-2 my-3  gap-[12px] w-auto   rounded-[8px] bg-[#ECDAC3]">
-                <p class="text-[#907C61]  text-center font-[Raleway] text-[16px]">Saisissez votre mot de passe : </p>
+            <form action="" class="flex flex-col items-center py-2 px-10 my-2 gap-[12px] self-stretch ">
+                <custom-input :value="accountInfo.firstname" v-model="accountInfo.firstname" classname="w-[340px] "
+                    label="Nom :" />
+                <custom-input :value="accountInfo.lastname" v-model="accountInfo.lastname" classname="w-[340px] "
+                    label="Prénom :" />
+                <custom-input :value="accountInfo.email" v-model="accountInfo.email" classname="w-[340px] " label="Email :"
+                    inputType="email" />
+                <custom-input :value="accountInfo.phone" v-model="accountInfo.phone" classname="w-[340px] "
+                    label="Numéro de téléphone :" inputType="tel" />
+            </form>
+            <gender-liste :genders="genders" />
+            <div
+                class=" flex flex-col justify-center items-center py-2 my-3 mx-8 gap-[12px] w-[340px]   rounded-[8px] bg-[#ECDAC3]">
+                <p class="text-[#907C61]  text-center font-[Raleway] text-[16px]">Definissez votre mot de passe : </p>
                 <form action="" class="flex flex-col gap-[12px]">
-                    <custom-input classname="mx-2" label="Email :" input-type="email" :value="credentials.email"
-                        v-model="credentials.email" />
-                    <custom-input classname=" mx-2 " label="Mot de passe :" input-type="password"
-                        :value="credentials.password" v-model="credentials.password" />
+                    <custom-input :value="accountInfo.password" v-model="accountInfo.password" inputType="password"
+                        classname="w-[320px] " />
+                    <custom-input :value="accountInfo.passwordConfirmation" v-model="accountInfo.passwordConfirmation"
+                        inputType="password" classname="w-[320px] " label="Confirmer :" />
                 </form>
-                <CustomCheckbox class=" mx-3" checkbox="Mémoriser mon authentification" />
-                <router-link :to="{ name: 'profile' }">
-                    <CustomButtonVue button="S'authentifier" class="bg-white w-8 mx-auto" />
-                </router-link>
             </div>
+            <div class="items-center my-2 mx-8">
+                <custom-checkbox />
+            </div>
+            <router-link :to="{ name: 'sign-up' }"><custom-button-vue class="mx-auto" /></router-link>
         </div>
     </div>
 </template>

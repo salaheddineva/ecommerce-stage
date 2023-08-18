@@ -1,5 +1,4 @@
 <script setup>
-import Header from '@/components/Header.vue';
 import DetailProduct from '@/components/DetailProduct.vue';
 import { reactive } from 'vue';
 const products = reactive([
@@ -29,9 +28,8 @@ const deleteItem = (id) => {
 </script>
 <template>
     <div>
-        <Header />
         <div class="mx-[8rem] mt-6 flex items-center px-4">
-            <h1 class="flex font-['Open_Sans'] text-[30px] pt-" >Liste de produits</h1>
+            <h1 class="flex  text-[30px] pt-" >Liste de produits</h1>
 
             <div class="ml-auto mt-[28px]  flex items-center space-x-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="ml-4">
@@ -45,7 +43,7 @@ const deleteItem = (id) => {
                         d="M16.5 12.75H7.5C7.08 12.75 6.75 12.42 6.75 12C6.75 11.58 7.08 11.25 7.5 11.25H16.5C16.92 11.25 17.25 11.58 17.25 12C17.25 12.42 16.92 12.75 16.5 12.75Z"
                         fill="black" />
                 </svg>
-                <button class="text-[20px] font-['Open_Sans']">Ajouter</button>
+                <button class="text-[20px] ">Ajouter</button>
             </div>
         </div>
         <DetailProduct :products="products" @deleteItem="deleteItem" />
