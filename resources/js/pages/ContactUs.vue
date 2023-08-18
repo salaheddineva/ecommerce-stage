@@ -1,14 +1,12 @@
 <script setup>
 import CustomInput from '@/components/globals/CustomInput.vue';
-import { ref, reactive } from 'vue';
+import { reactive } from 'vue';
 const accountInfo = reactive({
     firstname: "",
     email: "",
     phone: "",
     message: "",
-    
 });
-
 </script>
 <template>
     <div>
@@ -23,7 +21,6 @@ const accountInfo = reactive({
                     label="Numéro de téléphone :" inputType="tel" />
                 <custom-input :value="accountInfo.message" v-model="accountInfo.phone" classname="w-[340px] "
                     label="Numéro de téléphone :" inputType="text" />
-                
             </form>
         </div>
     </div>

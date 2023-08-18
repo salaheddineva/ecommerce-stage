@@ -1,12 +1,9 @@
 <script setup>
-import CustomHeader from '@/components/globals/CustomHeader.vue';
 import CustomQuantity from '@/components/CustomQuantity.vue';
 import CustomButtonVue from '@/components/globals/CustomButton.vue';
-import CustomFooterVue from '@/components/globals/CustomFooter.vue';
 </script>
 <template>
-    <CustomHeader />
-    <div class="flex  mx-20 my-28">
+    <div class="flex mx-20 my-28">
         <div class="flex flex-col space-y-20 w-[50%]">
             <img src="images/sac_marron.png" class="w-[500px]  " alt="">
             <div class="flex flex-row  space-x-2">
@@ -20,7 +17,8 @@ import CustomFooterVue from '@/components/globals/CustomFooter.vue';
             </div>
             <div class=" font-[Raleway]">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae eveniet culpa officia quidem
-                    mollitia impedit iste asperiores nisi reprehenderit consequatur, autem</p>
+                    mollitia impedit iste asperiores nisi reprehenderit consequatur, autem
+                </p>
             </div>
             <div class="flex items-center space-x-10"><span class="font-bold font-[Raleway]">Couleurs :</span>
                 <div class="flex space-x-14">
@@ -47,5 +45,4 @@ import CustomFooterVue from '@/components/globals/CustomFooter.vue';
             </div>
         </div>
     </div>
-    <CustomFooterVue />
 </template>

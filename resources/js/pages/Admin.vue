@@ -1,7 +1,6 @@
 <script setup>
 import Header from '@/components/Header.vue';
 import DetailProduct from '@/components/DetailProduct.vue';
-
 import { reactive } from 'vue';
 const products = reactive([
     {
@@ -20,7 +19,6 @@ const products = reactive([
         price: 1,
         image: 200
     },
-
 ]);
 const deleteItem = (id) => {
     const index = products.findIndex((product) => id === product.id);
@@ -48,12 +46,8 @@ const deleteItem = (id) => {
                         fill="black" />
                 </svg>
                 <button class="text-[20px] font-['Open_Sans']">Ajouter</button>
-
-
             </div>
         </div>
         <DetailProduct :products="products" @deleteItem="deleteItem" />
-
-
     </div>
 </template>

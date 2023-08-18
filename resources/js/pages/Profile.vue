@@ -1,11 +1,8 @@
 <script setup>
 import CustomProfileInput from '@/components/CustomProfileInput.vue';
-import CustomHeader from '@/components/globals/CustomHeader.vue';
-import CustomFooter from '@/components/globals/CustomFooter.vue';
 </script>
 <template>
     <div>
-        <CustomHeader />
         <div class="flex  flex-col items-center justify-center">
             <h3 class="text-[26px] font-['Open_Sans']  uppercase mt-6">Mon Profile</h3>
             <custom-profile-input class="mt-[29px]" />
@@ -27,12 +24,11 @@ import CustomFooter from '@/components/globals/CustomFooter.vue';
                 <button
                     class="rounded-[9px] border border-[#D1BCAB] px-[28px] py-[9px] text-[#C4AB8A] font-['Open_Sans']">Consulter</button>
             </div>
-            <button
-                class="my-[28px] rounded-[26px] bg-[#C99249]/20 px-[70px] py-[8px] text-[20px] font-['Open_Sans']">Enregistrer
-                les
-                modifications</button>
+            <router-link :to="{ name: 'our-products' }">
+                <button
+                    class="my-[28px] rounded-[26px] bg-[#C99249]/20 px-[70px] py-[8px] text-[20px] font-['Open_Sans']">Enregistrer les modifications
+                </button>
+            </router-link>
         </div>
-        <CustomFooter />
-
     </div>
 </template>

@@ -7,7 +7,6 @@ defineProps({
     }
 })
 const emits = defineEmits(['deleteItem', 'increase', 'decrease']);
-
 </script>
 <template>
     <div class="ml-32 mr-32 mt-10 flex w-auto   items-center border border-[#ECDAC3] border-x-0 py-2 px-4 space-x-[80%] ">

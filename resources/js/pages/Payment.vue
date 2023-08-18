@@ -1,10 +1,7 @@
 <script setup>
-import CustomHeader from '@/components/globals/CustomHeader.vue';
 import CustomButton from '@/components/globals/CustomButton.vue';
-import CustomFooter from '@/components/globals/CustomFooter.vue';
 </script>
 <template>
-    <CustomHeader />
     <div class="flex flex-col border border-[#ECDAC3] rounded-3xl m-24 p-16">
         <div class="flex justify-between">
             <div class="flex flex-col space-y-3 font-[Raleway] w-[50%] ">
@@ -14,7 +11,7 @@ import CustomFooter from '@/components/globals/CustomFooter.vue';
                 <span class="font-bold font-[Raleway]">Coordonnées de la carte :</span>
                 <table class="">
                     <tr class="border border-black/2 text-center">
-                        <td><input type="text" placeholder="Numéro" name="number" id="" class="focus:outline-none" ></td>
+                        <td><input type="text" placeholder="Numéro" name="number" id="" class="focus:outline-none"></td>
                         <div class="flex items-center justify-end px-2 space-x-2"><svg width="46" height="41"
                                 viewBox="0 0 46 41" fill="none" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -33,9 +30,11 @@ import CustomFooter from '@/components/globals/CustomFooter.vue';
                         </div>
                     </tr>
                     <tr>
-                        <td class="border border-black/2 text-center"><input type="text" placeholder="MM/AA" name="number" id="" class="focus:outline-none">
+                        <td class="border border-black/2 text-center"><input type="text" placeholder="MM/AA" name="number"
+                                id="" class="focus:outline-none">
                         </td>
-                        <td class="border border-black/2 text-center"><input type="text" placeholder="CVC" name="number" id="" class="focus:outline-none">
+                        <td class="border border-black/2 text-center"><input type="text" placeholder="CVC" name="number"
+                                id="" class="focus:outline-none">
                         </td>
                     </tr>
                 </table>
@@ -55,9 +54,10 @@ import CustomFooter from '@/components/globals/CustomFooter.vue';
         </div>
         <div class="flex justify-end mr-4 "><span class="font-[Raleway] font-bold "> Total : 850€</span></div>
         <div class="flex justify-end space-x-1 ">
-            <CustomButton class="text-[#ECDAC3]  text-xl text-center rounded-[9px]  h-[50px] py-2" button="Retour" />
+            <router-link :to="{ name: 'cart' }">
+                <CustomButton class="text-[#ECDAC3]  text-xl text-center rounded-[9px]  h-[50px] py-2" button="Retour" />
+            </router-link>
             <CustomButton class="bg-[#ECDAC3] text-xl text-center rounded-[9px] h-[50px] py-2 " button="Payer" />
         </div>
     </div>
-    <CustomFooter />
 </template>

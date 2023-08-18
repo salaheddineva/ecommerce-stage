@@ -32,7 +32,7 @@ const onInput = (e) => {
 <template>
     <div class="flex flex-row h-[40px] px-3 py-[6px] items-center   rounded-[18px] border border-solid border-[#D1BCAB] bg-white"
         :class="classname">
-        <label for="mdp" class="text-black  w-[40%]  font-[Raleway] text-[10px] " :class="{
+        <label for="mdp" class=" w-[40%]  font-[Raleway] text-[10px] " :class="{
             'text-[#c5ad99] font-[Raleway] text-[10px]  translate-y-[-55%] ': isFocused,
             ' text-black font-[Raleway] text - [13px]': !isFocused
         }">{{ label }}</label>

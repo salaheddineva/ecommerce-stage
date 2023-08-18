@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-    <div>
+    <div class=" bottom-0 left-0 right-0">
         <div class="flex justify-between w-full  bg-black p-10">
             <div class=" space-y-8 text-white">
                 <span class="font-['Open_Sans']">Sfakes</span>
@@ -13,11 +13,13 @@
             <div class="flex flex-col space-y-8 text-white">
                 <h1 class="font-['Open_Sans']">Liens</h1>
                 <div class="flex flex-col">
-                    <a href="#about us" class="text-white font-['Open_Sans']">À propos de nous</a>
-
-                    <a href="#products" class="text-white font-['Open_Sans']">Produits</a>
-
-                    <a href="#contact us" class="text-white font-['Open_Sans']">Contactez-nous</a>
+                    <router-link :to="{ name: 'about-us' }"
+                        class="text-white font-['Open_Sans']  text-20 font-normal leading-24 tracking-wider">A
+                        propos de nous</router-link> <router-link :to="{ name: 'our-products' }"
+                        class="text-white font-['Open_Sans']  text-20 font-normal leading-24 tracking-wider">Produits</router-link>
+                    <router-link :to="{ name: 'contact-us' }"
+                        class="text-white font-['Open_Sans']  text-20 font-normal leading-24 tracking-wider">Contactez nous
+                    </router-link>
                 </div>
             </div>
             <div class="flex flex-col space-y-8 text-white">

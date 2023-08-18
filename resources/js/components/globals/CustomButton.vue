@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps ({
+const props = defineProps({
     button: {
         type: String,
         default: "S'inscrire"
@@ -9,7 +9,7 @@ const props = defineProps ({
 
 <template>
     <div
-        class=" h-[40px] w-[200px] px-16 py-2 m-6 border border-solid border-[#D1BCAB] rounded-2xl  font-[Raleway] text-sm">
+        class=" h-[40px] w-[200px] px-16 text-center py-2 m-6 border border-solid border-[#D1BCAB] rounded-2xl  font-[Raleway] text-sm">
         <button>{{ button }}</button>
     </div>
 </template>

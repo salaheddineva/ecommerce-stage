@@ -5,9 +5,7 @@ defineProps({
     }
 });
 const emits = defineEmits(['deleteItem']);
-
 </script>
-
 <template>
     <div class="mx-[8rem] mt-6 flex w-[80%] items-center border border-[#ECDAC3] border-x-0 py-2 px-4 ">
         <h3 class="font-[Raleway] w-[22%] ">{{ product.name }}</h3>

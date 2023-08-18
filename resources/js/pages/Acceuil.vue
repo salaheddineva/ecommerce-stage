@@ -3,9 +3,7 @@
 </script>
 <template>
   <div>
- 
-
-    <div class="flex">
+    <div class="flex ">
       <img class=" w-full h-[839px]" src="images/img2.png" alt="background" />
     </div>
     <div class="flex justify-center h-[380px] pt-6">
@@ -33,11 +31,6 @@
       <div class="w-1/3">
         <img src="images/img6.jpg" alt="Image" class="w-[481px] h-[350px]">
       </div>
-
-
-
-
-
     </div>
   </div>
 </template>

@@ -1,6 +1,4 @@
 <script setup>
-import CustomHeader from '@/components/globals/CustomHeader.vue';
-import CustomFooter from '@/components/globals/CustomFooter.vue';
 import OrderListe from '@/components/order/OrderListe.vue';
 import { reactive } from 'vue';
 const orders = reactive([
@@ -24,7 +22,6 @@ const orders = reactive([
     }]);
 </script>
 <template>
-    <custom-header />
     <div class="flex flex-col my-8">
         <div class="flex  space-x-[20px] mx-[8rem]  w-[80%]  items-cente ">
             <svg width="17" height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -42,5 +39,4 @@ const orders = reactive([
         </div>
         <order-liste :orders="orders" />
     </div>
-    <custom-footer />
 </template>
